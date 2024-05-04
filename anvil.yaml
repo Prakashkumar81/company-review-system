@@ -15,6 +15,12 @@ db_schema:
   table_1:
     client: none
     server: full
-    columns: []
+    columns:
+    - name: Employee ID
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Password
+      admin_ui: {width: 200, order: 1}
+      type: string
     title: Table 1
 renamed: true

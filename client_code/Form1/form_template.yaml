@@ -42,19 +42,20 @@ components:
     type: TextArea
     layout_properties: {grid_position: 'EKURRY,FVBYCT'}
   - name: text_box_1
-    properties: {placeholder: PASSWORD, background: 'theme:Primary Container', role: null,
+    properties: {placeholder: RATING, background: 'theme:Primary Container', role: null,
       type: number}
     type: TextBox
     layout_properties: {grid_position: 'SXBFJW,CBQUMR'}
     data_bindings:
     - {property: tooltip, code: 'self.item['''']', writeback: false}
   - name: text_area_2
-    properties: {height: 34.600006103515625, text: Password, background: ''}
+    properties: {height: 34.600006103515625, text: 1-10, background: '', visible: true,
+      underline: true, italic: true}
     type: TextArea
     layout_properties: {grid_position: 'CDNPPE,VDKBBZ'}
   - name: button_1
     properties:
-      text: LOG IN
+      text: SUBMIT
       background: theme:On Secondary Container
       foreground: theme:Error
       align: center
