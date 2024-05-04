@@ -5,9 +5,16 @@ services:
   server_config: {}
 package_name: company_review_system
 allow_embedding: false
-name: company review system
+name: CRS
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-metadata: {title: CRS}
+metadata: {title: company review system, description: rate your senior performance in front of the main senior,
+  logo_img: 'asset:crs logo app.png'}
 startup_form: Form1
+db_schema:
+  table_1:
+    client: none
+    server: full
+    columns: []
+    title: Table 1
 renamed: true
