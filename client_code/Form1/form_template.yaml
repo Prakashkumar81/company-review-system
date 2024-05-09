@@ -45,7 +45,7 @@ components:
     properties: {placeholder: RATING, background: 'theme:Primary Container', role: null,
       type: number}
     type: TextBox
-    layout_properties: {grid_position: 'SXBFJW,CBQUMR'}
+    layout_properties: {grid_position: 'SXBFJW,CBQUMR', row_background: ''}
     data_bindings:
     - {property: tooltip, code: 'self.item['''']', writeback: false}
   - name: text_area_2
@@ -64,7 +64,7 @@ components:
       italic: false
       role: [outlined-button, elevated-button]
     type: Button
-    layout_properties: {grid_position: 'EFAISS,LLWSKS'}
+    layout_properties: {grid_position: 'GMEZGO,RXLHOO'}
   - name: rich_text_1
     properties: {align: right, content: 'Contact Us:
 
