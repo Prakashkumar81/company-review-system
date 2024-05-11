@@ -9,7 +9,7 @@ container:
   - {property: foreground, code: 'self.item['''']', writeback: false}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}', wrap_on: never, border: '10', foreground: ''}
+  properties: {col_widths: '{}', wrap_on: never, border: '10', foreground: '', background: 'theme:Primary'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -20,10 +20,12 @@ components:
     layout_properties: {grid_position: 'VSZJIJ,MJELQF'}
     data_bindings: []
   - name: outlined_button_2
-    properties: {text: About, role: outlined-button, background: 'theme:Disabled Container',
-      align: right, enabled: true, icon: 'fa:bars'}
+    properties: {text: About, role: outlined-button, background: 'theme:Secondary',
+      align: right, enabled: true, icon: 'fa:bars', foreground: 'theme:On Primary'}
     type: Button
     layout_properties: {grid_position: 'WOJRGC,CZVXWG'}
+    data_bindings:
+    - {property: border, code: 'self.item['''']', writeback: false}
   - name: rich_text_2
     properties: {format: plain_text, content: CRS ID, font: '30', align: center, font_size: 20,
       background: '#56b7b8'}
@@ -38,21 +40,43 @@ components:
     type: Label
     layout_properties: {grid_position: 'EDFRDJ,TEWLLO'}
   - name: text_area_1
-    properties: {height: 34.600006103515625, text: Full Name}
+    properties: {height: 34.600006103515625, text: 'ID
+
+        ', italic: true}
     type: TextArea
     layout_properties: {grid_position: 'EKURRY,FVBYCT'}
+  - name: text_box_2
+    properties: {text: BOSS NAME, bold: false, italic: false, underline: false, foreground: 'theme:On
+        Primary Container', role: null, background: 'theme:On Secondary'}
+    type: TextBox
+    layout_properties: {grid_position: 'AFFMYZ,SUWRFU', row_background: ''}
+    event_bindings: {pressed_enter: text_box_2_pressed_enter}
+    data_bindings:
+    - {property: placeholder, code: 'self.item['''']', writeback: false}
+    - {property: enabled, code: 'self.item['''']', writeback: false}
+    - {property: border, code: 'self.item['''']', writeback: false}
+    - {property: font, code: 'self.item['''']', writeback: false}
+  - name: text_area_2
+    properties: {height: 34.600006103515625, text: Name, background: '', visible: true,
+      underline: false, italic: true}
+    type: TextArea
+    layout_properties: {grid_position: 'CDNPPE,VDKBBZ'}
   - name: text_box_1
     properties: {placeholder: RATING, background: 'theme:Primary Container', role: null,
       type: number}
     type: TextBox
-    layout_properties: {grid_position: 'SXBFJW,CBQUMR', row_background: ''}
+    layout_properties: {grid_position: 'MIBHLQ,HNPDRM'}
     data_bindings:
     - {property: tooltip, code: 'self.item['''']', writeback: false}
-  - name: text_area_2
-    properties: {height: 34.600006103515625, text: 1-10, background: '', visible: true,
-      underline: true, italic: true}
-    type: TextArea
-    layout_properties: {grid_position: 'CDNPPE,VDKBBZ'}
+    event_bindings: {pressed_enter: text_box_1_pressed_enter}
+  - name: check_box_1
+    properties: {text: 5-8, foreground: 'theme:On Primary'}
+    type: CheckBox
+    layout_properties: {grid_position: 'JIRTLX,IMKWFJ'}
+  - name: check_box_2
+    properties: {text: 8-10, foreground: 'theme:On Primary'}
+    type: CheckBox
+    layout_properties: {grid_position: 'YKROYB,LAARCB'}
   - name: button_1
     properties:
       text: SUBMIT
@@ -64,11 +88,12 @@ components:
       italic: false
       role: [outlined-button, elevated-button]
     type: Button
-    layout_properties: {grid_position: 'GMEZGO,RXLHOO'}
+    layout_properties: {grid_position: 'LJDYSV,JPSWXL'}
+    event_bindings: {click: button_1_click}
   - name: rich_text_1
     properties: {align: right, content: 'Contact Us:
 
-        khalifaprakash813@gmail.com'}
+        khalifaprakash813@gmail.com', foreground: 'theme:Tertiary Container'}
     type: RichText
     layout_properties: {grid_position: 'JPTWHE,GPDJLU'}
   data_bindings: []

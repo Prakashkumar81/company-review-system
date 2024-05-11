@@ -12,15 +12,21 @@ metadata: {title: company review system, description: rate your senior performan
   logo_img: 'asset:crs logo app.png'}
 startup_form: Form1
 db_schema:
-  table_1:
+  crs_review:
     client: none
     server: full
     columns:
-    - name: Employee ID
-      admin_ui: {width: 200, order: 0}
+    - name: EMP ID
+      admin_ui: {order: 1, width: 200}
       type: string
-    - name: Password
-      admin_ui: {width: 200, order: 1}
+    - name: BOSS NAME
+      admin_ui: {width: 200, order: 2}
       type: string
-    title: Table 1
+    - name: RATING 5-8
+      admin_ui: {order: 3, width: 200}
+      type: bool
+    - name: RATING 8-10
+      admin_ui: {width: 200, order: 4}
+      type: bool
+    title: CRS REVIEW
 renamed: true

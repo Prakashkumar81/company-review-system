@@ -2,7 +2,8 @@ unique_ids:
   forms:
     Form1: 2G446RUYLOOAAX4FH75VBLHEQQWVLCYR
   modules: {}
-  server_modules: {}
+  server_modules:
+    ServerModule1: '1715419740088449504344046.9997'
   assets:
     crs logo app.png: '1714850454043595497940895.2208'
     logo.png: '171485030057538683638185.35592'
