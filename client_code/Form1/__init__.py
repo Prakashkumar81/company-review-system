@@ -27,7 +27,6 @@ class Form1(Form1Template):
     NAME = self.text_area_2.text
     RATING = self.check_box_1.checked
     RATING = self.check_box_2.checked
-    anvil.server.call('submit', ID=ID , NAME=NAME )
+    anvil.server.call('submit', ID=ID , NAME=NAME , rating 5-8=CheckBox1, rating 8-10=CheckBox2)
     Notification("your response has been recorded").show()
-    
     
