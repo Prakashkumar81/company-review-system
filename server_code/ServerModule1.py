@@ -18,5 +18,5 @@ import anvil.server
 
 
 @anvil.server.callable
-def submit (EMP ID , BOSS NAME , RATING 5-8 , RATING 8-10):
+def submit (EMP , NAME , RATING , RATING ):
 app_tables.crs.add_row(emp id = id , boss name=name , rating 5-8 = checkbox1 , rating 8-10 = checkbox2)
