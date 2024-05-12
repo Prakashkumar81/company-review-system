@@ -1,7 +1,7 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', role: outlined-button, visible: true}
+  properties: {html: '@theme:standard-page.html', role: null, visible: true}
   data_bindings:
   - {property: tooltip, code: 'self.item['''']', writeback: false}
   - {property: background, code: 'self.item['''']', writeback: false}
@@ -9,7 +9,8 @@ container:
   - {property: foreground, code: 'self.item['''']', writeback: false}
 components:
 - type: ColumnPanel
-  properties: {col_widths: '{}', wrap_on: never, border: '10', foreground: '', background: 'theme:Primary'}
+  properties: {col_widths: '{}', wrap_on: never, border: '10', foreground: '', background: 'theme:On
+      Disabled'}
   name: content_panel
   layout_properties: {slot: default}
   components:
@@ -18,6 +19,13 @@ components:
       foreground: 'theme:On Secondary Container', align: right, icon: 'fa:home'}
     type: Button
     layout_properties: {grid_position: 'VSZJIJ,MJELQF'}
+    data_bindings: []
+  - name: image_1
+    properties: {source: _/theme/logo.png, background: '', role: null, horizontal_align: center,
+      vertical_align: bottom, display_mode: original_size}
+    type: Image
+    layout_properties: {grid_position: 'ESDBFV,ZOSZFK', full_width_row: true}
+    event_bindings: {mouse_up: image_1_mouse_up}
     data_bindings: []
   - name: outlined_button_2
     properties: {text: About, role: outlined-button, background: 'theme:Secondary',
@@ -63,7 +71,7 @@ components:
     layout_properties: {grid_position: 'CDNPPE,VDKBBZ'}
   - name: text_box_1
     properties: {placeholder: RATING, background: 'theme:Primary Container', role: null,
-      type: number}
+      type: number, enabled: false}
     type: TextBox
     layout_properties: {grid_position: 'MIBHLQ,HNPDRM'}
     data_bindings:
@@ -88,8 +96,17 @@ components:
       italic: false
       role: [outlined-button, elevated-button]
     type: Button
-    layout_properties: {grid_position: 'LJDYSV,JPSWXL'}
+    layout_properties: {grid_position: 'AIZCYP,CZUQUX'}
     event_bindings: {click: button_1_click}
+  - name: spacer_1
+    properties: {height: 83}
+    type: Spacer
+    layout_properties: {grid_position: 'FPLWOG,SFLRKS'}
+  - name: youtube_video_1
+    properties: {background: 'theme:Outline', loop: true, mute: true, youtube_id: 'https://youtu.be/gjx-iHGXk9Q?si=jVyDk5G4L1j-1OUb'}
+    type: YouTubeVideo
+    layout_properties: {grid_position: 'NPJSYG,CBCNEY', row_background: 'theme:Tertiary
+        Container'}
   - name: rich_text_1
     properties: {align: right, content: 'Contact Us:
 
