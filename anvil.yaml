@@ -29,4 +29,9 @@ db_schema:
       admin_ui: {width: 200, order: 4}
       type: bool
     title: CRS REVIEW
+  table_2:
+    client: none
+    server: full
+    columns: []
+    title: Table 2
 renamed: true
