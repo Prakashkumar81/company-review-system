@@ -25,8 +25,8 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     ID = self.text_area_1.text
     NAME = self.text_area_2.text
-    RATING  = self.check_box_1.checked
+    RATING = self.check_box_1.checked
     RATING = self.check_box_2.checked
-    anvil.server.call('submit', ID=ID , NAME=NAME , RATING=RATING);
+    anvil.server.call('submit', ID=ID , NAME=NAME,RATING=RATING);
     Notification("your response has been recorded").show()
 
