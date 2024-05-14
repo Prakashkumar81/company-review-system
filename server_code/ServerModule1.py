@@ -19,4 +19,5 @@ import anvil.server
 
 @anvil.server.callable
 def submit (ID, NAME , RATING , RATING):
-app_tables.crs.add_row('submit', NAME=BOSS NAME,ID=EMP ID,RATING5-8=CHECKBOX1, RATING8-10=CHECKBOX2)
+app_tables.crs.add_row('submit',EMP ID=EMP ID,BOSS NAME=BOSS NAME,RATING 5-8=RATING 5-8, RATING 8-10=RATING 8-10)
+Notification("Your response has been recorded").show()
